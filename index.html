@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script src="assets/js/app.js"></script>
+
+    <!-- ===== BOX ICONS ===== -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Dashboard</title>
+  </head>
+
+  <!---***********  Navbar Code ************** ---------------->
+
+  <body id="body-pd">
+    <div class="l-navbar" id="nav-bar">
+      <nav class="nav">
+        <div>
+          <a href="#" class="nav__logo">
+            <!-- <i class='bx bx-layer nav__logo-icon'></i> -->
+            <img style="width: 25px" src="./assets/img/butterfly.png" alt="" />
+          </a>
+
+          <a href="#" class="nav__logo">
+            <i style="font-size: 1.25rem" class="bx bx-search"></i>
+            <span class="nav__logo-name">Search</span>
+          </a>
+
+          <div class="nav__list">
+            <a href="#" class="nav__link active">
+              <i style="font-size: 1.25rem" class="bx bx-home-alt"></i>
+              <span class="nav__name">Home</span>
+            </a>
+
+            <a href="#" class="nav__link">
+              <i class="bx bx-grid-alt nav__icon"></i>
+              <span class="nav__name">Dashboard</span>
+            </a>
+
+            <a href="#" class="nav__link">
+              <i style="font-size: 1.25rem" class="bx bx-notepad"></i>
+              <span class="nav__name">Notes</span>
+            </a>
+
+            <a href="#" class="nav__link">
+              <i class="bx bx-user nav__icon"></i>
+              <span class="nav__name">Users</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="#" class="nav__link">
+          <i style="margin-top: 10em" class="bx bx-bell nav__icon"></i>
+          <span style="margin-top: 12.5em" class="nav__name">Notification</span>
+        </a>
+
+        <a href="#" class="nav__link">
+          <i class="bx bx-log-out nav__icon"></i>
+          <span class="nav__name">Log Out</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="grid-container">
+      <!-- main container to divide page into 3 vertical parts -->
+      <div style="padding-top: 30px" class="first">
+        <!-- first vertical section starts from here -->
+
+        <div class="name" style="display: inline-flex">
+          <img class="intro__img" src="./assets/img/profilepic.png" alt="a picture of user" />
+          <span style="display: flex; flex-direction: column; padding-left: 20px; padding-top: 20px">
+            <h3>Hi Mike,</h3>
+            <p>welcome back.</p>
+          </span>
+        </div>
+
+        <div class="tyt">
+          <h4>Today</h4>
+          <h3 style="line-height: 2">$19,892</h3>
+          <h6>Account Balance</h6>
+
+          <h3 style="line-height: 2">$4,000</h3>
+          <h6>Year-to-Date Contributions</h6>
+
+          <h3 style="line-height: 2">$1,892</h3>
+          <h6>Total Interest</h6>
+        </div>
+
+        <button class="want-btn">I want to <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+
+        <div class="transactions">
+          <h4>Recent Transactions</h4>
+
+          <div class="txn">
+            <p class="rq-text-small-grey">2020-07-21</p>
+            <p class="rq-text-small">Withdrawal Transfer to Bank-xxx11</p>
+            <hr style="width: 75%" />
+          </div>
+
+          <div class="txn">
+            <p class="rq-text-small-grey">2020-07-21</p>
+            <p class="rq-text-small">Withdrawal Transfer to Bank-xxx11</p>
+            <hr style="width: 75%" />
+          </div>
+
+          <div class="txn">
+            <p class="rq-text-small-grey">2020-07-21</p>
+            <p class="rq-text-small">Withdrawal Transfer to Bank-xxx11</p>
+            <hr style="width: 75%" />
+          </div>
+        </div>
+      </div>
+      <!-- first vertical section ends here -->
+
+      <div class="second">
+        <h5 style="padding-top: 30px; font-weight: bold; color: #383cc1">Retirement Income</h5>
+        <h4 style="margin-top: 10px">Starting Year 2056</h4>
+
+        <div class="grid-container1">
+          <div class="grid-item">
+            <h3>$300,000</h3>
+            <h6 style="font-weight: bolder; font-size: 1rem">My Goal</h6>
+            <hr style="width: 80%; margin-left: 0; border: 1px solid #383cc1" />
+          </div>
+
+          <div class="grid-item">
+            <h3>59%</h3>
+            <h6 style="font-weight: bolder; font-size: 1rem">Goal Achieved</h6>
+            <hr style="width: 80%; margin-left: 0; border: 1px solid #383cc1" />
+          </div>
+
+          <div class="grid-item">
+            <h3>$300</h3>
+            <h6 style="font-weight: bolder; font-size: 1rem">Est. Monthly Income</h6>
+            <hr style="width: 80%; margin-left: 0; border: 1px solid #383cc1" />
+          </div>
+        </div>
+
+        <div class="contributions">
+          <h4>Contributions Overtime</h4>
+          <div id="stackedBarChart" class="chart"></div>
+        </div>
+
+        <div class="factors">
+          <div class="grid-container1">
+            <!-- <div class="grid-item">🔵Employer: <strong>K 73,500</strong> </div>
+          <div class="grid-item">🔵Employee: <strong>K 52,500</strong></div>
+          <div class="grid-item">🔵Total Interest: <strong>K 244,313</strong></div> -->
+          </div>
+        </div>
+
+        <h5 style="font-weight: bold">How do I Compare to my peers?</h5>
+        <h6 style="font-weight: lighter; color: #bbbbbb">These numbers represents current goal achievement</h6>
+
+        <div class="grid-container2">
+          <div class="cont-btn">
+            <div class="age">
+              <strong>Age:</strong>
+              <select style="border: none">
+                <option value="Under 16">Under 16</option>
+                <option value="16 to 25">30 To 40</option>
+              </select>
+              <hr style="margin-left: 0; width: 70%" />
+            </div>
+            <div class="salary">
+              <strong>Salary:</strong>
+              <select style="border: none">
+                <option value="Under 16">K20-K30</option>
+                <option value="16 to 25">K30-K40</option>
+              </select>
+              <hr style="margin-left: 0; width: 70%" />
+            </div>
+            <div class="gender">
+              <strong>Gender:</strong>
+              <select style="border: none">
+                <option value="Under 16">Male</option>
+                <option value="16 to 25">Female</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="gauge-charts">
+            <div class="chart">
+              <div id="gaugeChart1"></div>
+              <p class="footer">Average</p>
+            </div>
+            <div class="chart">
+              <div id="gaugeChart2"></div>
+              <p class="footer">Top</p>
+            </div>
+            <div class="chart">
+              <div id="gaugeChart3"></div>
+              <p class="footer">Me</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- circle with percentage -->
+      </div>
+      <!-- second vertical section ends here -->
+
+      <div style="padding-top: 30px" class="third">
+        <!-- third vertical section starts from here -->
+
+        <div class="skill-bars">
+          <h5>Retirement Strategy</h5>
+          <div class="bar">
+            <div class="info">
+              <span>Employee Contributions</span>
+            </div>
+            <div class="progress-line html">
+              <span></span>
+            </div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <span>Retirement Age</span>
+            </div>
+            <div class="progress-line css">
+              <span></span>
+            </div>
+          </div>
+          <hr />
+          <div class="employer">
+            <h6 style="line-height: 3">Employer Contributions 8.4%</h6>
+            <h6>Interest Rate 5%</h6>
+          </div>
+
+          <div class="update-help">
+            <button class="update-btn" type="button" name="button">Update</button>
+            <h6 style="margin-left: 10px">View Help Docs ></h6>
+          </div>
+        </div>
+
+        <div class="housing">
+          <p>Are you considering a</p>
+          <h3>Housing Advance ?</h3>
+          <p class="rq-text-small-grey">Limited Time Reduced Interest</p>
+          <p>
+            <a href="#">Learn More <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--===== MAIN JS =====-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
